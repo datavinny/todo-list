@@ -1,4 +1,8 @@
 #criar-tarefa {
-    height: 30px;
-    width: 150px;
+  height: 30px;
+  width: 150px;
+}
+
+.highlight {
+  background-color:rgb(128, 128, 128);
 }
