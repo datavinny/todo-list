@@ -3,6 +3,7 @@ const input = document.getElementById('texto-tarefa');
 const listaTarefa = document.getElementById('lista-tarefas');
 const tarefas = document.getElementsByTagName('li');
 const botaoApagar = document.getElementById('apaga-tudo');
+const botaoClear = document.getElementById('remover-finalizados');
 
 function createTask() {
   const createElementLi = document.createElement('li');
@@ -15,13 +16,17 @@ botaoTarefa.addEventListener('click', createTask);
 
 function clearTask() {
   input.value = '';
-  // const deletar = listaTarefa.childNodes;
-  // for (let index = 0; index < tarefas.length; index += 1) {
-    // listaTarefa.removeChild(deletar[index]);
-  // }
   listaTarefa.innerHTML = '';
 }
 botaoApagar.addEventListener('click', clearTask);
+
+function clearCompleted() {
+  const completed = document.querySelectorAll('.completed');
+  for (let index = 0; index < completed.length; index += 1) {
+    completed[index].remove();
+  }
+}
+botaoClear.addEventListener('click', clearCompleted);
 
 function highLight(event) {
   const highlight = document.querySelector('.highlight');
@@ -32,11 +37,11 @@ function highLight(event) {
 }
 
 function completar(event) {
-  const completed = document.querySelector('.completed');
-  if (completed !== null) {
-    completed.classList.remove('completed');
+  if (event.target.classList[0] === 'completed' || event.target.classList[1] === 'completed') {
+    event.target.classList.remove('completed');
+  } else {
+    event.target.classList.add('completed');
   }
-  event.target.classList.add('completed');
 }
 
 function percorrerTarefas() {

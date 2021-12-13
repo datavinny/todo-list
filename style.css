@@ -6,6 +6,10 @@
   height: 30px;
   width: 150px;
 }
+#remover-finalizados {
+  height: 30px;
+  width: 150px;
+}
 
 .highlight {
   background-color:rgb(128, 128, 128);
