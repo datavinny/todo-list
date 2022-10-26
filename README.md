@@ -14,9 +14,3 @@ Neste projeto, foi testado habilidades de:
 
 - Manipular CSS
 - Manipular Javascript
-
-### Data de entrega
-
-- Projeto individual ou em grupo;
-- Foram 3 dias de projeto;
-- Data de entrega do projeto: `13/12/2021 - 17:21h`
